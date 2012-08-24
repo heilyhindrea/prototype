@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<title>Kohapeal ja RetailCentralStorage</title>
+	
+	<link rel="stylesheet" href="../style.css" type="text/css">
+	
+	<script src="../lib/jquery.js" type="text/javascript" charset="utf-8"></script>
+	
+	
+	<script>
+		
+		$(document).ready(function() {
+			
+			$('#seade_kohe').bind("click", function(){
+			
+				$("#laovalik").css("display","block");
+			
+				
+				
+			});
+					
+			
+			$('#seade_hiljem').bind("click", function(){
+			
+				$("#laovalik").css("display","none");
+				$("#keskladu").css("display","none");
+				$("#esinduse_ladu").css("display","none");
+				
+				
+
+			});
+			
+			$('#vali_keskladu').bind("click", function(){
+			
+				$("#keskladu").css("display","block");
+				$("#esinduse_ladu").css("display","none");
+			
+			});
+			
+			$('#vali_esinduse_ladu').bind("click", function(){
+			
+				$("#keskladu").css("display","none");
+				$("#esinduse_ladu").css("display","block");
+			
+			});
+			
+		
+		
+		});
+	</script>
+	
+</head>
+
+<body>
+	<h5>FYI: Protsess "Komplektita liitumine" või "Pakkumise rakendamine"</h5>
+	<div id="pakkumine">
+		<h3>VALITUD PAKKUMINE</h3>
+	</div>
+	
+	<div id="seadme_otsus">
+		<h3>SEADME OTSUS</h3>
+		<form action="">
+		    
+			Seade hiljem <input id = "seade_hiljem" type="radio" name="otsus"/><br />
+			Seade kohe <input id="seade_kohe"type="radio" name="otsus"/>
+		</form>
+	</div>
+	
+	
+	
+		<form id = "laovalik" action="" style="display:none;">
+			<h3>VALI LADU</h3>
+			Keskladu <input id = "vali_keskladu" type="radio" name="otsus"/><br />
+			Esinduse ladu <input id="vali_esinduse_ladu" type="radio" name="otsus"/>
+			
+		</form>
+				
+
+		<div id="esinduse_ladu" style="display:none;">
+			<h3>VALI SEADE ESINDUSE LAOST</h3>
+		</div>
+				
+		<div id="keskladu" style="display:none;">
+			<h3>VALI SEADE KESKLAOST</h3>
+			
+		</div>
+		
+		<input type="button" value="Katkesta" id="katkesta"/>
+		<input type="button" value="Salvesta" id="salvesta"/>
+	
+	
+	
+
+</body>
+</html>

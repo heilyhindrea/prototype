@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<title>Telefoniteel ja RetailCentralStorage</title>
+	
+	<link rel="stylesheet" href="../style.css" type="text/css">
+	
+	<script src="../lib/jquery.js" type="text/javascript" charset="utf-8"></script>
+	
+	
+	<script>
+		
+		$(document).ready(function() {
+			
+			$('#seade_kohe').bind("click", function(){
+			
+				$("#keskladu").css("display","block");
+				
+				
+				
+			});
+					
+			
+			$('#seade_hiljem').bind("click", function(){
+				
+				$("#keskladu").css("display","none");
+			
+
+			});
+			
+			
+		
+		
+		});
+	</script>
+	
+</head>
+
+<body>
+	<h5>FYI: Protsess "Komplektita liitumine" või "Pakkumise rakendamine"</h5>
+	<div id="pakkumine">
+		<h3>VALITUD PAKKUMINE</h3>
+	</div>
+	
+	<div id="seadme_otsus">
+		<h3>SEADME OTSUS</h3>
+		<form action="">
+		   
+			Seade hiljem <input id = "seade_hiljem" type="radio" name="otsus"/>
+			<br />	
+			Seade kohe <input id="seade_kohe"type="radio" name="otsus"/>
+		</form>
+	</div>
+	
+	
+		<div id="keskladu" style="display:none;">
+			<h3>VALI SEADE KESKLAOST</h3>
+			
+		</div>
+		<input type="button" value="Katkesta" id="katkesta"/>
+		<input type="button" value="Salvesta" id="salvesta"/>
+		<div id="tellimused">
+			<h3>TELLIMUSED</h3>
+		</div>
+				
+		
+	
+	
+	
+
+</body>
+</html>
